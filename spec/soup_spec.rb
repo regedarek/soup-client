@@ -18,7 +18,11 @@ describe "Soup Client" do
     @client.new_image("http://image.link", description = 'image desc')
   end
 
-  it "should add new text" do
+  it "should add new_text" do
+    @client.new_text("text", title = "title")
+  end
+
+  it "should add new quote" do
     @client.new_quote("quote", "author")
   end
 
