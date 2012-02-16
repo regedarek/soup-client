@@ -6,7 +6,23 @@ describe "Soup Client" do
     @client.login
   end
 
-  it "should ad new link to soup.io" do
+  it "should log in" do
+    login = @client.login
+  end
+
+  it "should add new link to soup.io" do
     @client.new_link("http://wp.pl", title = 'wp', description = 'WP')
+  end
+
+  it "should add new imaage" do
+    @client.new_image("http://image.link", description = 'image desc')
+  end
+
+  it "should add new text" do
+    @client.new_quote("quote", "author")
+  end
+
+  it "should add new video" do
+    #TODO
   end
 end
