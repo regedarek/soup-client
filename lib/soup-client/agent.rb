@@ -13,9 +13,9 @@ module Soup
 
     def faraday(domain)
       Faraday.new(url: domain) do |builder|
-        builder.use Faraday::Request::UrlEncoded 
-        builder.use Faraday::Response::Logger    
-        builder.use Faraday::Adapter::NetHttp 
+        builder.use Faraday::Request::UrlEncoded
+        builder.use Faraday::Response::Logger
+        builder.use Faraday::Adapter::NetHttp
       end
     end
   end
